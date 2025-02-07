@@ -1,0 +1,5 @@
+.custom-cursor {
+    mix-blend-mode: difference; /* Optional for better visibility */
+    transition: box-shadow 0.2s ease, background-color 0.2s ease;
+  }
+  

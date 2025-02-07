@@ -1,0 +1,105 @@
+#projects {
+    padding: 40px 20px;
+    color: #f0f0f0;
+    text-align: center;
+  }
+  
+  .projectsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .projectCard {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    box-shadow: 0 16px 16px #333;
+    margin: 15px;
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .projectImage {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .projectTitle {
+    font-size: 24px;
+    margin: 15px 0;
+  }
+  
+  .projectDescription {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .projectButtons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .projectGitBtn,
+  .projectLiveBtn {
+    background-color: #f0f0f0;
+    color: #222;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .projectGitBtn:hover {
+    background-color: black;
+    color: white;
+    box-shadow: 0 6px 16px #333;
+    transition: 0.2s;
+  }
+  .projectLiveBtn:hover {
+    background-color: hsl(120, 100%, 74%);
+    color: white;
+    box-shadow: 0 6px 16px #333;
+    transition: 0.2s;
+  }
+  
+  .projectGitBtn {
+    margin-right: 10px; /* Add spacing between buttons */
+  }
+  
+  .projectLiveBtn {
+    margin-left: 10px; /* Add spacing between buttons */
+  }
+  
+
+  @media screen and (max-width: 1024px) {
+    .projectsContainer {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .projectCard {
+        width: 45%; /* Two cards per row on tablets */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .projectsContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projectCard {
+        width: 90%; /* Full width on smaller screens */
+        max-width: 400px;
+        margin: 10px 0;
+    }
+}

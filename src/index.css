@@ -1,0 +1,29 @@
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: transparent;
+  text-decoration: none;
+  font-family: 'Poppins',sans-serif;
+}
+
+body{
+  background: #1C1C1C;
+  overflow: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  color: #FFFF00;
+}
+
+#root{
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 768px){
+  body{
+    padding: 1rem;
+  }
+}

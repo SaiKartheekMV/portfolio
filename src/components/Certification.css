@@ -1,0 +1,65 @@
+#certifications {
+  padding: 40px 20px;
+  color: #f0f0f0;
+  text-align: center;
+}
+
+.certificationsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.certCard {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  box-shadow: 0 16px 16px #333;
+  margin: 15px;
+  padding: 20px;
+  width: 300px;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.certTitle {
+  font-size: 24px;
+  margin: 15px 0;
+}
+
+.certDate {
+  font-size: 16px;
+  color: #aaa;
+}
+
+.certDescription {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+  .certificationsContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .certCard {
+    width: 45%; /* Two cards per row on tablets */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .certificationsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .certCard {
+    width: 90%; /* Full width on smaller screens */
+    max-width: 400px;
+    margin: 10px 0;
+  }
+}

@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+#intro {
+    height: calc(100vh - 4rem);
+    width: 100vw;
+    max-width: 75rem;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.bg {
+    margin-top: 3rem;
+    position: absolute;
+    top: -4rem;
+    right: 0;
+    z-index: -3;
+    object-fit: cover;
+    height: 100vh;
+    transition: opacity 0.3s ease-in-out;
+    
+}
+
+.introContent {
+    height: 100vh;
+    width: 100vw;
+    padding: 2rem;
+    font-size: 3rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hello {
+    font-size: 1.75rem;
+    font-family: 'Poppins', sans-serif;
+    z-index: -2;
+}
+
+.introName {
+    color: yellow;
+    z-index: -2;
+}
+
+.introPara {
+    font-size: medium;
+    font-weight: 300;
+    letter-spacing: 1px;
+    z-index: -2;
+}
+
+.btn {
+    background: white;
+    margin: 1rem 0;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 2rem;
+    color: black;
+}
+
+.hireImg {
+    object-fit: cover;
+    margin: 0 0.25rem;
+    height: 1rem;
+    color: black;
+}
+
+.cursor {
+    color: yellow;
+}
+
+@media screen and (max-width: 768px) {
+    .introContent {
+        padding: 1.5rem;
+    }
+
+    .hello {
+        font-size: 1.5rem;
+    }
+
+    .introPara {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .introContent {
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+
+    .hello {
+        font-size: 1.2rem;
+    }
+
+    .introPara {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .introContent {
+        font-size: 1rem;
+        padding: 0.75rem;
+    }
+
+    .hello {
+        font-size: 1rem;
+    }
+
+    .introPara {
+        font-size: 0.75rem;
+    }
+}

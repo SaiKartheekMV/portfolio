@@ -1,0 +1,73 @@
+* {
+  color: white;
+}
+
+#about {
+  padding: 50px;
+  text-align: center;
+}
+
+#about h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.resume-table {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: black; /* Maintain black background */
+  color: white; /* Ensure text is white */
+}
+
+.resume-table th,
+.resume-table td {
+  padding: 15px;
+  border-bottom: 1px solid #444; /* Darker border for subtle separation */
+  text-align: left;
+  font-size: 1.2em; /* Slightly larger font */
+}
+
+.resume-table th {
+  width: 40%;
+  background-color: #333; /* Dark gray background for headers */
+  font-weight: bold;
+}
+
+.resume-table td {
+  width: 60%;
+}
+
+.resume-table tr:last-child td {
+  border-bottom: none; /* Remove border from the last row */
+}
+
+@media (max-width: 768px) {
+  #about {
+    padding: 30px;
+  }
+
+  .resume-table {
+    width: 100%; /* Make table occupy full width on smaller screens */
+  }
+
+  .resume-table th,
+  .resume-table td {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  #about h2 {
+    font-size: 1.5em; /* Adjust heading size for smaller screens */
+    margin-bottom: 15px;
+  }
+
+  .resume-table th,
+  .resume-table td {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}

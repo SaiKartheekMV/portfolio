@@ -1,0 +1,52 @@
+/* Preloader Container */
+.preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #111; /* Adjust to your theme color */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1000;
+}
+
+/* Individual Letter Styling */
+.letter {
+  font-size: 3rem; /* Adjust font size as needed */
+  font-weight: bold;
+  margin: 0 10px;
+  opacity: 0; /* Initial state */
+  animation: rotateScaleColor 2s infinite ease-in-out;
+  display: inline-block;
+}
+
+/* Adding delay to each letter for a staggered effect */
+.letter-m { animation-delay: 0s; }
+.letter-v { animation-delay: 0.3s; }
+.letter-s { animation-delay: 0.6s; }
+.letter-k { animation-delay: 0.9s; }
+
+/* Keyframes for professional rotation, scaling, and color */
+@keyframes rotateScaleColor {
+  0% {
+    transform: scale(0.8) rotate(0deg);
+    color: #3498db;
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1.1) rotate(20deg);
+    color: #e74c3c;
+  }
+  70% {
+    transform: scale(1) rotate(-10deg);
+    color: #f39c12;
+  }
+  100% {
+    transform: scale(0.8) rotate(0deg);
+    color: #3498db;
+    opacity: 0;
+  }
+}

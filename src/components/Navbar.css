@@ -1,0 +1,259 @@
+.navbar {
+    height: 5rem;
+    width: 100vw;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    max-width: 80rem;
+    margin-top: 1rem;
+    background: linear-gradient(135deg, #111, #222); /* Dark background gradient */
+    border-radius: 1rem; /* Rounded corners for a smoother look */
+    animation: fadeInUp 0.6s ease-out forwards, neonGlow 3s linear infinite; /* Removed border-image, added glow animation */
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.logo {
+    object-fit: contain;
+    height: 3rem;
+    width: 6rem;
+}
+
+.logo:hover {
+    color:#ffff00; /* Neon yellow hover */
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    text-shadow: 0 0 5px #ffff00, 0 0 10px #ffff00, 0 0 15px #ffff00; /* Neon blue and red glow */
+}
+
+.menuList {
+    margin: 1rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.navbar  button {
+    color: #000;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.navbar a button{
+    color: #000;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.menuList:hover {
+    position: relative;
+}
+
+.menuList:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px; /* Space between the text and the underline */
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, rgba(255, 255, 0, 0), rgba(255, 255, 0, 1), rgba(255, 255, 0, 0)); /* Neon yellow gradient */
+    transition: all 0.4s ease-in-out; /* Smooth transition */
+    transform: scaleX(0); /* Initially hidden */
+    transform-origin: left;
+}
+
+.menuList:hover::after {
+    transform: scaleX(1); /* Expand when hovered */
+    transform-origin: left;
+}
+
+button:hover {
+    color: #000;
+    background:  #ffff00; /* Neon yellow on hover */
+    transition: 0.2s ease-in;
+    box-shadow:  0 0 10px rgba(255, 255, 0, 0.8); /* Neon yellow glow */
+}
+
+.glow-effect {
+    box-shadow:  0 0 20px rgba(255, 255, 0, 0.8), 0 0 30px rgba(255, 0, 0, 0.8); /* Neon blue and red glow */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.parallax {
+    position: relative;
+    overflow: hidden;
+}
+
+.parallax::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('path-to-your-image.jpg') no-repeat center center;
+    background-size: cover;
+    transform: translateZ(-1px) scale(1.5); 
+    z-index: -1;
+    filter: brightness(0.7); /* Slight darkening for better contrast */
+}
+
+.contactBtn {
+    background: #ffff00; /* Neon yellow */
+    color: #000;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.8); /* Neon yellow glow */
+}
+
+.contactImg {
+    object-fit: contain;
+    height: 1rem;
+    width: 1rem;
+    margin: 1rem;
+}
+
+.contactBtn:hover {
+    background-color:  #000;
+    color: #ffff00;
+    transition: 0.2s ease-in-out;
+    box-shadow:  0 0 15px rgba(255, 255, 0, 0.8);
+}
+
+
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 0.4rem;
+}
+
+.line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s;
+}
+
+.line.open:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.line.open:nth-child(2) {
+    opacity: 0;
+}
+
+.line.open:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+@keyframes neonGlow {
+    0% {
+        box-shadow: 0 0 15px rgba(255, 255, 0, 0.7), 0 0 20px rgba(255, 0, 0, 0.7), 0 0 25px rgba(0, 255, 255, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.7), 0 0 25px rgba(0, 255, 255, 0.7), 0 0 30px rgba(255, 255, 0, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(0, 255, 255, 0.7), 0 0 20px rgba(255, 255, 0, 0.7), 0 0 25px rgba(255, 0, 0, 0.7);
+    }
+}
+
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
+
+    .logo {
+        height: 2.5rem;
+        width: 5rem;
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .burger {
+        display: flex;
+    }
+
+    .Menu {
+        position: absolute;
+        top: 5rem;
+        right: 0;
+        background: #222;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        padding: 1rem 0;
+        display: none;
+        border-radius: 0.5rem;
+    }
+
+    .Menu.active {
+        display: flex;
+    }
+
+    .menuList {
+        width: 100%;
+        text-align: center;
+        padding: 0.5rem;
+        color: white;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .contactBtn {
+        display: none; /* Hide the "Contact Me" button on mobile if not needed */
+    }
+}
+
+/* Animation for navbar */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

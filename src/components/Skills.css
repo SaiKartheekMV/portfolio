@@ -1,0 +1,117 @@
+#skills {
+  padding: 40px 20px;
+  color: #f0f0f0;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.card {
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  width: 300px; 
+  min-height: 350px; 
+  margin: 20px;
+  display: flex;
+  align-items: center; 
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  z-index: 0;
+}
+
+.card h3 {
+  z-index: 1;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.card ul {
+  z-index: 1;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 20px 0; 
+}
+
+.card ul li {
+  margin-bottom: 10px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card:nth-child(1) {
+  background-image: url('../assets/image1.jpg'); /* Update path for relative usage */
+}
+
+.card:nth-child(2) {
+  background-image: url('../assets/image4.jpg'); /* Update path for relative usage */
+}
+
+.card:nth-child(3) {
+  background-image: url('../assets/image2.png'); /* Ensure you have the correct image */
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+      justify-content: center;
+  }
+
+  .card {
+      width: 45%; /* Two cards per row on tablets */
+      margin: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .card {
+      width: 90%; /* Full width on smaller screens */
+      margin: 10px 0;
+  }
+}
+
+/* For very small screens (mobile devices) */
+@media screen and (max-width: 480px) {
+  .card {
+      width: 100%; /* Take full width */
+      padding: 20px;
+  }
+
+  .card h3 {
+      font-size: 20px;
+  }
+
+  .card ul li {
+      font-size: 16px;
+  }
+}
