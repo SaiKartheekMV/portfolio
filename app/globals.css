@@ -61,6 +61,23 @@ body {
   }
 }
 
+@keyframes pageWarp {
+  0% {
+    opacity: 0;
+    transform: translateY(18px) scale(0.985);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+.animate-page-warp {
+  animation: pageWarp 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
 .animate-spin-slow {
   animation: spinSlow 30s linear infinite;
 }
