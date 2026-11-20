@@ -65,7 +65,7 @@ export default function TesseractDilation() {
 
           <div className="p-4 rounded-xl bg-black/60 border border-amber-500/20">
             <span className="text-[11px] font-mono uppercase text-amber-400">
-              Miller's Planet Equivalent
+              Miller&apos;s Planet Equivalent
             </span>
             <div className="text-2xl font-mono font-bold text-amber-400 mt-1">
               {millersPlanetMicroseconds < 1

@@ -35,12 +35,6 @@ export default function RootLayout({ children }) {
     <html lang="en" className="dark scroll-smooth">
       <head>
         <meta name="theme-color" content="#030712" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
       </head>
       <body className="bg-[#030712] text-zinc-100 antialiased font-sans">{children}</body>
     </html>

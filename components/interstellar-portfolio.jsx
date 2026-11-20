@@ -87,7 +87,7 @@ export default function InterstellarPortfolio() {
             </div>
             <div>
               <span className="font-mono text-xs font-bold tracking-widest text-white group-hover:text-amber-400 transition-colors uppercase block">
-                {interstellarProfile.name.split(" ")[0]} // ENDEAVOUR
+                {interstellarProfile.name.split(" ")[0]} &bull; ENDEAVOUR
               </span>
               <span className="text-[10px] font-mono text-zinc-400 tracking-wider">
                 {interstellarProfile.coordinates.split("//")[0]}
@@ -201,7 +201,7 @@ export default function InterstellarPortfolio() {
           {/* Quote Banner */}
           <div className="w-full max-w-3xl mx-auto mb-8 p-3 rounded-xl bg-amber-500/5 border border-amber-500/20 text-center backdrop-blur-sm animate-fade-in">
             <p className="text-xs sm:text-sm font-mono text-amber-200/90 italic">
-              "{interstellarQuotes[quoteIndex].quote}"
+              &ldquo;{interstellarQuotes[quoteIndex].quote}&rdquo;
             </p>
             <span className="text-[10px] font-mono text-amber-400/70 tracking-widest uppercase block mt-1">
               — {interstellarQuotes[quoteIndex].author}
@@ -583,7 +583,7 @@ export default function InterstellarPortfolio() {
             {/* Education History */}
             <div className="lg:col-span-7 space-y-4">
               <h3 className="text-sm font-mono uppercase tracking-wider text-amber-400 mb-2">
-                // ACADEMIC INSTITUTIONS
+                ACADEMIC INSTITUTIONS
               </h3>
               {academicAcademy.map((edu, idx) => (
                 <div
@@ -603,7 +603,7 @@ export default function InterstellarPortfolio() {
                     {edu.degree} {edu.specialization && `• ${edu.specialization}`}
                   </p>
                   <p className="text-[11px] font-mono text-zinc-500 mt-0.5">
-                    {edu.location} // {edu.period}
+                    {edu.location} &bull; {edu.period}
                   </p>
                 </div>
               ))}
@@ -629,7 +629,7 @@ export default function InterstellarPortfolio() {
             {/* Honors & Accolades */}
             <div className="lg:col-span-5 space-y-4">
               <h3 className="text-sm font-mono uppercase tracking-wider text-sky-400 mb-2">
-                // HONORS & CERTIFIED CREDENTIALS
+                HONORS &amp; CERTIFIED CREDENTIALS
               </h3>
               <div className="space-y-3">
                 {missionAccolades.map((item, idx) => (
